@@ -1,0 +1,36 @@
+body {
+	color: #B9C1A5;
+	background-color: #363832;
+	font-family: dejavu;
+	padding-left: 200px;
+	padding-right: 200px;
+}
+
+#PaddedH3 {
+	padding-left: 40px;		
+}
+
+#PaddedH3 a {
+	color: #B9C1A5;
+	text-decoration: none;
+}
+
+#PaddedParagraph {
+	padding-left: 80px;
+}
+
+#Return {
+	color: #B9C1A5;
+	text-decoration: none;
+}
+
+#Code {
+	background-color: #B9C1A5;
+	color: #363832;	
+	width: 350px;
+	height: 100px;
+}
+
+h3 {
+	color: #B9C1A5;
+}
