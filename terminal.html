@@ -2,18 +2,47 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<title>Bash Syntax</title>
+		<title>Very Useful Information</title>
 	</head>
 	<body>
 		<header>
-			<h1 align=center>Linux Terminal</h1>
+			<h1 align=center>The Linux Terminal</h1>
 			<p align=center>-> <a href="index.html" id="Return">Return</a></p>
 		</header>	
-		<h3 id="H3Padded">Intdoduction</h3>
+		<h3 id="H3Padded">Introduction</h3>
 		<p id="ParagraphPadded">First off I should say if you use Linux you should be using the terminal. The thing that separates Linux and Windows is that Linux was build from the ground up to be run from the command line, compared to in Windows where it was largely an afterthought playing second fiddle to the gui. On Linux you can to everything quickly and efficiently all with a few commands. Once you get over the shock and get comfortable in the command line, I guarantee you will find yourself preferring it and find yourself frustrated when you have to work with frustrating guis. To access the terminal it requires a terminal emulator, this just emulates a text environment when you are logged in to a display server. The three I can vouch for is gnome-terminal for noobies, then urxvt and st for for the more advanced. Now to not complicate things we will only be working in the home directory. That is located in /home/user and where the Downloads, Documents, etc. is located.</p>
-		<div id="Code">
-			<p id="PaddedParagraph">echo $HOME</p>	
-		</div>
-		<p>The echo </p>
+		<h3>That's Cool and All but Why?</h3>
+		<p>This is personal preference but the reason I prefer the terminal is because it's fast and unobtrusive. These stem from the fact that the terminal is text only. That means no images, no complicated user interfaces, but most importantly no bullshit. It's refreshing in a world of constant distractions, so if you're somebody like me, learn to use the terminal. Also, you look smart, you are smart if you use the terminal. Okay, yeah that's an awful reason but if nothing else do it to impress that girl you like in class.</p>
+		<p>-> echo $HOME</p>
+		<p>This will return the location of your home directory. For example for me it's:</p>
+		<p>-> /home/dominic</p>
+		<h3>Navigating Your Files</h3>	
+		<p>When you first open up your terminal it will be located in your home directory, like a normal file manager. The default shell for the majority of users will be bash, though a new user should not complicate himself with the details, which will colorcode the different file types. For example directories will be a different color than normal files. If you want to look at everything located in said directory to type ls, short for list.</p>
+		<p>-> ls</p>
+		<p>Okay, now if you want to change your directory, equivalent to double clicking on a folder, you just type in cd, short for change directory.</p>
+		<p>-> cd /home/dominic/Downloads<br><br>cd ~/Downloads</p>
+		<p>This should be pretty intuitive, both will go to your Downloads directory. When you put a tilde before a backslash that tells your computer to go to your home directory, so you don't have to type in /home/dominic every time. Then if you wish to return back to your home directory the same concept applies.</p>
+		<p>-> cd ~/<br><br>-> cd /home/dominic</p>
+		<p>Both of these commands will lead back to your home directory. The last thing I will cover here is going back just a single directory, to do this you just type in ../.</p>
+		<p>-> cd ../</p>
+		<p>These two basic command are vital to becoming comfortable in the terminal and are fairly easy to learn.</p>
+		<h3>Manipulating Files</h3>
+		<p>Then to manipulate the files you will make use of four basic commands, touch, mv, rm, and cat. The touch command creates a file, the mv allows you to both rename files and move them, and the cat displays the contents of the file. To create a file to just type in touch and then the complete file name, including the extensions. For example to create a text file you type:</p>
+		<p>-> touch TextFile.txt</p>
+		<p>This creates a text file called TextFile.txt in your current directory. Now if you want to rename the TextFile.txt you would type in mv and then the file you want to change and then the name you want to change it too.</p>
+		<p>-> mv TextFile.txt IRenamedMyFile.txt</p>
+		<p>This would change the file to IRenamedMyFile.txt. Then if you want to append to the file you would do the following:</p>
+		<p>-> echo "Hello World" >> TextFile.txt</p>
+		<p>This adds whatever is in the quotes to the file. Then if you want to see the contents of the file you type cat and then the file.</p>
+		<p>-> cat TextFile.txt</p>
+		<p>Lastly, when you want to delete a file you would just rm -f it.</p>
+		<p>-> rm -f TextFile.txt</p>
+		<h3>Conclusion + Man Pages</h3>
+		<p>These are just the basics of the terminal, but my last command I'm going to leave you with is the man command. Man being short for manual, which is exactly what it sounds a manual for almost every program on your computer. Most man pages give you a description of the program, then the different flags and configuration options of the program. To use man you just type man and then the program name.</p>
+		<p>-> man mv</p>
+		<p>This brings up the man page for the mv command. Now this is very useful and I recommend you use this as a resource if you really wish to learn a program.</p>	
+		<center>
+		<img src="./Images/BaseCommands.jpg" alt="Bash Commands" style="width:700px;height:400px;">	
+		</center>
 	</body>
 </html>

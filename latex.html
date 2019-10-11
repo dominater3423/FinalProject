@@ -2,14 +2,30 @@
     <head>    
         <meta charset="UTF-8">    
         <link rel="stylesheet" type="text/css" href="style.css">    
-        <title>Bash Syntax</title>    
+        <title>Very Useful Information</title>    
     </head>    
     <body>     
         <header>    
-            <h1>Basic Latex Syntax</h1>    
+            <h1 align=center>Presentations with Latex's Beamer</h1>    
+			<p align=center><a href="index.html" id="Return">-> Return</a></p>		
         </header>    
-        <footer>         
-            
-        </footer>    
+		<h3>Introduction</h3>
+		<p>This is an alternative way to create presentations faster and more professionally. For those of you who don't know what Latex is, according to their website "LaTeX, which is pronounced «Lah-tech» or «Lay-tech» (to rhyme with «blech» or «Bertolt Brecht»), is a document preparation system for high-quality typesetting. It is most often used for medium-to-large technical or scientific documents but it can be used for almost any form of publishing." Essentially you type up the document using Latex's syntax and then compile it to the format you wish. Most commonly people will use pdflatex but there are various options. In this tutorial I'll be showing you how to create a presentation compiled into a pdf. Enough of that though, let's get into installing Latex. I'll only cover the installation for Linux, but I'm sure with a bit of googling you can figure it out if you plebs are either on Mac or Windows.</p>
+		<h3>Installation</h3>
+		<p>In many distros, like Debian and Arch, an entire Latex distribution is available to download through the repositories, so first check there. If unavailable though we will cover installing through Tex Live.</p>	
+		<p>Debian -> sudo apt-get install texlive-full</p>		
+		<p>Arch -> sudo pacman -S texlive-most</p>
+		<p>Now if texlive isn't available through the repositories it will be a little more complicated. Run these commands in your terminal. If you wish to grab a more updated zip file grab it directly from their website, the date at the time of writing this is October 11, 2019.</p>	
+		<p>-> curl http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip</p>
+		<p>-> sudo apt install unzip</p>
+		<p>-> unzip install-tl.zip</p>
+		<p>-> cd install-tl-20191011</p>
+		<p>-> ./install-tl -gui text</p>
+		<p>Configure it as you wish and then finally we just need to add the packages to your path. To make it easy we will just add append it to your bashrc.</p>
+		<p>-> sudo echo "PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH" >> ~/.bashrc</p>
+		<p>Then congratulations you have installed Latex on your computer.</p>
+		<h3>Hello World</h3>
+		<p>Copy and paste this into a .tex file to see if everything is working.</p>
+		<p>-> \documentclass{beamer}<br>-><br>-> \usetheme{warsaw}<br>-><br>-> \title{My First Presentation with Beamer}<br>-> \author{Dominic Carducci}<br>-> \date{\today}<br>-><br>->\begin{document}<br>-><br>-> \maketitle\<br>-><br>-> begin{frame}<br>-><br>-> Hello world<br>-><br>\end{frame}<br>-><br>-> \end{document}</p>
     </body>    
 </html>

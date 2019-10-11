@@ -24,11 +24,19 @@ body {
 	text-decoration: none;
 }
 
-#Code {
-	background-color: #B9C1A5;
-	color: #363832;	
-	width: 350px;
-	height: 100px;
+.box {
+	width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;	
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 50px;
+}
+
+.red {
+	background: #B9C1A5;
+	color: #363832;
 }
 
 h3 {
