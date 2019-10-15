@@ -2,7 +2,7 @@
     <head>    
         <meta charset="UTF-8">    
         <link rel="stylesheet" type="text/css" href="style.css">    
-        <title>Very Useful Information</title>    
+        <title>Arguably Useless Information</title>    
     </head>    
     <body>     
         <header>    
@@ -26,6 +26,33 @@
 		<p>Then congratulations you have installed Latex on your computer.</p>
 		<h3>Hello World</h3>
 		<p>Copy and paste this into a .tex file to see if everything is working.</p>
-		<p>-> \documentclass{beamer}<br>-><br>-> \usetheme{warsaw}<br>-><br>-> \title{My First Presentation with Beamer}<br>-> \author{Dominic Carducci}<br>-> \date{\today}<br>-><br>->\begin{document}<br>-><br>-> \maketitle\<br>-><br>-> begin{frame}<br>-><br>-> Hello world<br>-><br>\end{frame}<br>-><br>-> \end{document}</p>
+		<p>-> \documentclass{article}<br>-><br>-> \title{My First Latex Document}<br>-> \author{Dominic Carducci}<br>-> \date{\today}<br>-><br>-> \begin{document}<br>-> <br>-> \maketitle<br>-><br>-> You've got to love this world, hello world!<br>-> <br>-> \end{document}</p>	
+		<p>Then compile it with pdflatex and the program will, if correct, generate a pdf.</p>
+		<p>-> pdflatex YourFile.tex</p>
+		<p>This is boring you say, that's only a document you say, be patient young one. To create a presentation we will be using Latex's beamer, I will give you a basic hello world example and go through what does what. The syntax is mostly self-explanatory so too much explaining is unnecessary.</p>
+		<p>-> \documentclass{beamer}<br>-><br>-> \usetheme{warsaw}<br>-><br>-> \title{My First Presentation with Beamer}<br>-> \author{Dominic Carducci}<br    >-> \date{\today}<br>-><br>-> \begin{document}<br>-><br>-> \maketitle\<br>-><br>-> \begin{frame}<br>-><br>-> Hello world<br>-><br>-> \end{frame}<br>-><br>-> \end{document}</p>	
+		<p>When creating a latex document you first need to declare what kind of document you wish to create. This is the \documentclass command and for presentations we will use beamer. Next comes the \usepackage commands, I included none in the examples but with this you will be able to import what you need for your document, for example to include graphics you will use the \usepackage{graphicx}. Much like python's import. Keep in mind this doesn't insert anything by itself, only gives you the ability to use the package, for if you neglected the command pdflatex would give you an error. Then going down we specify the details for the title, then in the document itself the \maketitle generates the title using Latex's default format. Lastly, the begin/end document reports to Latex that everything written in the tag shall be included in the document. The commands listed before this can be though of sorta like settings configuring your document. This makes up the most basic properties of a Latex document. To create a presentation the formats a little different but the core is still the same. Beamer instead of article, using frames, separating slides into columns, etc. First though, I need to introduce how to create lists and insert images.</p>
+		<h3>Lists</h3>
+		<p>The former is an ordered, and the latter unordered.</p>
+		<p>-> \begin{enumerate}<br>-><br>-> \item{one}<br>-> \item{two}<br>-> \item{three}<br>-><br>-> \end{enumerate}</p>
+		<p>Notice, like html, you have to close everything you open.</p>
+		<p>-> \begin{itemize}<br>-><br>-> \item{one}<br>-> \item{two}<br>-> \item{two}<br>-> \item{three}<br>-><br>-> \end{itemize}</p>		
+		<h3>Images</h3>
+		<p>Remember is we want to import an image we need the graphicx package. To do that just type in \usepackage{graphicx} at the top of your document.</p>
+		<p>-> \includegraphics[scale=0.5]{\path\to\image}</p>
+		<h3>Creating Slides</h3>
+		<p>If you want to create different slides you need to insert a begin/end frame. Whatever information you wish to put in there goes, though since presentations are usually bullet pointed you'd usually use an unordered list. Remember each frame is a seperate slide.</p>
+		<p>-> \begin{frame}<br>-><br>-> \begin{enumerate}<br>-><br>-> \item{one}<br>-> \item{two}<br>-> \item{three}<br>-><br>-> \end{enumerate}<br>-><br>-> \end{frame}</p>
+		<p>If we want to create a title slide all we have todo is use the same \maketitle command expect instead of the frame we wish to put it, presumably the one. Also, if you want to give your slide a title just include it in parentheses after the \begin{frame}.</p>
+		<p>-> \begin{frame}{Title}<br>-><br>-> \maketitle<br>-><br>-> \end{frame}</p>
+		<p>Simple enough, no?</p>
+		<h3>Columns</h3>
+		<p>This is the last topic we'll cover, this allows you to format your slide in a way that allows for you to have a bulleted list on one side, and an image on the other.</p>
+		<p>-> \begin{frame}{Columns}<br>-> \begin{columns}<br>-> \column{0.6\textwidth}<br>-><br>-> \begin{itemize}<br>-> \item{one}<br>-> \item{two}<br>-> \end{itemize}<br>-> \column{0.4\textwidth}<br>-> \begin{enumerate}<br>-> \item{Buckle my}<br>-> \item{shoe}<br>-> \end{enumerate}<br>-><br>-> \end{columns}<br>-> \end{frame}</p>
+		<h3>Conclusion</h3>
+		<p>I got nothing to say, awesome conclusion, I know.</p>
+		<center>
+		<img src="./Images/Donald.jpg">
+		</center>
     </body>    
 </html>
